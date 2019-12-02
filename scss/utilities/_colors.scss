@@ -1,0 +1,43 @@
+$white: #fff;
+$black: #1a1a1a;
+$orange: #ba5802;
+$grey: #888;
+$dark-grey: #333;
+$red: #c83035;
+$light-grey: #e7e7e7;
+$grey-icons: #d8d8d8;
+$blue: #0023ff;
+$light-blue:#0043ff;
+$pink: #ff547c;
+
+.pink {
+  color: $pink;
+}
+
+.blue {
+  color: $blue !important;
+}
+
+.orange {
+  color: $orange;
+}
+
+.white {
+  color: $white;
+}
+
+.grey {
+  color: $grey;
+}
+
+.red {
+  color: $red;
+}
+
+.bg-red {
+  background-color: $red !important;
+}
+
+.grey-icons {
+  color: $grey-icons;
+}

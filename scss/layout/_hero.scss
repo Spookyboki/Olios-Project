@@ -1,0 +1,79 @@
+//sass-lint:disable no-ids
+#hero {
+  padding-top: 167px;
+
+  .title {
+    font-weight: bold;
+    width: 45%;
+    padding-bottom: 17px;
+  }
+
+  .txt {
+    width: 40%;
+    line-height: 19px;
+    padding-bottom: 21px;
+    margin-left: 2px;
+  }
+
+  .red-link {
+    font-weight: bold;
+
+    .s-play {
+      font-size: 14px;
+      padding: 0 3px;
+    }
+  }
+
+  .txt-box {
+    display: none;
+  }
+
+  .show {
+    display: block !important;
+  }
+
+  @include breakpoint (tablet) {
+    padding: 75px 0 35px;
+
+    .container {
+      display: flex;
+      clear: both;
+    }
+
+    .txt-box {
+      float: left;
+      clear: both;
+    }
+
+    .title {
+      font-size: 30px;
+      width: 75%;
+    }
+
+    .txt {
+      font-size: 15px;
+      width: 80%;
+      padding-bottom: 40px;
+    }
+  }
+
+  @include breakpoint (phone) {
+    text-align: center;
+    padding-top: 50px;
+
+    .title {
+      width: 100%;
+      font-size: 26px;
+    }
+
+    .txt {
+      width: 80%;
+      font-size: 13px;
+      margin: 0 auto;
+    }
+
+    .red-link {
+      display: none;
+    }
+  }
+}

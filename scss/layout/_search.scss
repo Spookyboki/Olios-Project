@@ -1,0 +1,171 @@
+.search-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color:rgba(255, 255, 255, 0.99);
+    z-index: 3;
+    padding-top: 150px;
+    display: none;
+
+    .wrapper {
+        max-width: 1572px;
+        margin: 0 auto;
+        padding: 0 40px 0 200px;
+    }
+
+    input {
+        border: none;
+        border-bottom: 2px solid $grey-icons;
+        font-size: 120px;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        width: 100%;
+        padding-bottom: 20px;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .text-span {
+        display: block;
+        font-size: 36px;
+        color: $grey-icons;
+        font-weight: 300;
+    }
+
+    .boxes {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        padding: 120px 0;
+    }
+
+    .result-title {
+        text-transform: uppercase;
+        font-size: 70px;
+        font-weight: 300;
+    }
+
+    .result {
+        margin-bottom: 50px;
+        align-items: center;
+        display: flex;
+        height: auto;
+        max-width: 800px;
+        padding-right: 80px;
+    }
+
+    img {
+        padding-right: 50px;
+        max-height: 150px;
+    }
+
+    .search-result {
+        font-weight: bold;
+        font-size: 20px;
+
+    }
+
+    form {
+        position: relative;
+
+        .close {
+            position: absolute;
+            right: 0;
+            top: 60px;
+            color: $grey-icons;
+            font-size: 25px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    @include breakpoint(tablet) {
+
+        padding-top: 80px;
+
+        input {
+            font-size: 70px;
+            padding-bottom: 0;
+            margin-bottom: 15px;
+
+        }
+
+        .text-span {
+            font-size: 24px;
+        }
+
+        .boxes {
+            padding: 40px 0 0 0;
+        }
+
+        .result-title {
+            font-size: 45px;
+        }
+
+        img {
+            max-height: 125px;
+        }
+
+        form {
+            .close {
+                top: 30px;
+            }
+        }
+    }
+
+    @include breakpoint(phone) {
+
+        padding-top: 80px;
+        height: auto;
+
+        .wrapper {
+            padding: 0px 15px 0 81px;
+        }
+
+        input {
+            font-size: 40px;
+            padding-bottom: 0;
+            margin-bottom: 15px;
+
+        }
+
+        .text-span {
+            font-size: 17px;
+        }
+
+        .boxes {
+            padding: 25px 0 0 0;
+        }
+
+        .result {
+            width: 100%;
+            padding-right: 0;
+            margin-bottom: 30px;
+        }
+
+        .result-title {
+            font-size: 25px;
+        }
+
+        img {
+            max-height: 100px;
+        }
+
+        form {
+            .close {
+                top: 10px;
+            }
+        }
+
+        .search-result {
+            font-size: 11px;
+        }
+    }
+}

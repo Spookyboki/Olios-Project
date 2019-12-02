@@ -1,0 +1,273 @@
+.products {
+    background-color: $light-grey;
+    height: 100%;
+
+    .wrapper {
+        max-width: 1612px;
+        padding: 0 40px;
+        margin: 0 auto;
+        padding-left: 200px;
+        height: 100%;
+    }
+
+    .content {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .tooltip {
+        position: absolute;
+    }
+
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 140px;
+        background-color: $grey;
+        color: $white;
+        text-align: center;
+        border-radius: 6px;
+        padding: 13px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -60px;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .tooltip .tooltiptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: $grey transparent transparent transparent;
+    }
+
+    .content:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .title {
+        padding: 95px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 97%;
+        flex-wrap: nowrap;
+
+        .s {
+            font-size: 65px;
+            color: $grey;
+        }
+    }
+
+    .cat-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .categ-title {
+        color: $grey;
+        font-size: 24px;
+        padding-right: 20px;
+    }
+
+    h1 {
+        font-size: 72px;
+        font-weight: 300;
+    }
+
+    .box {
+        background-color: $white;
+        height: 350px;
+        margin: 10px;
+        padding: 20px 30px;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        h3 {
+            text-transform: uppercase;
+            font-size: 30px;
+            font-weight: 300;
+            padding-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            color: $grey;
+            padding-bottom: 10px;
+        }
+
+        span {
+            font-weight: bold;
+        }
+    }
+
+    .big-box {
+        width: 71.5%;
+        display: flex;
+        justify-content: center;
+
+        p {
+            padding-bottom: 40px;
+        }
+
+        img {
+            padding-right: 80px;
+            width: 70%;
+        }
+
+        .text-box {
+            padding-top: 80px;
+        }
+    }
+
+    .small-box {
+        width: 23%;
+        
+        img {
+            width: 60%;
+            display: block;
+            margin: auto;
+            padding-bottom: 55px;
+        }
+    }
+
+    .med-box {
+        width: 47%;
+        display: flex;
+        justify-content: center;
+
+        .text-box {
+            padding-top: 80px;
+        }
+
+        img {
+           padding-right: 20px;
+           width: 60%;
+        }
+
+        p {
+            padding-bottom: 20px;
+        }
+    }
+
+    .show-more {
+        font-weight: bold;
+        text-transform: uppercase;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+
+    @media screen and (max-width: 1000px){
+        
+        .box {
+            width: 45%;
+            height: auto;
+        }
+
+        h1 {
+            font-size: 45px;
+        }
+
+        .wrapper {
+            padding: 0;
+            padding-left: 140px;
+        }
+
+        .title {
+            padding: 95px 0 50px;
+        }
+
+        .big-box {
+            align-items: center;
+
+            .text-box {
+                padding-top: 40px;
+            }
+
+            img {
+                padding-right: 0;
+                width: 90%;
+            }
+        }
+    }
+
+    @include breakpoint (tablet) {
+
+        height: auto;
+
+        .box {
+            width: 45%;
+            height: auto;
+        }
+
+        .content {
+            padding-bottom: 20px;
+        }
+
+        .title {
+            padding: 100px 0 60px;
+
+            .s {
+                font-size: 35px;
+            }
+        }
+
+        h1 {
+            font-size: 50px;
+        }
+    }
+
+    @include breakpoint(phone) {
+
+        height: auto;
+
+        .wrapper {
+            padding-left: 0px;
+            padding: 0 18px 0 90px;
+        }
+
+        h1 {
+            font-size: 30px;
+        }
+
+        .title {
+
+            .s {
+                font-size: 35px;
+            }
+        }
+
+        .categ-title {
+            display: none;
+        }
+
+        .box {
+            width: 100%;
+
+            h3 {
+                font-size: 22px;
+            }
+        }
+
+        .show-more {
+            margin-top: 0;
+            margin: 20px 0;
+            font-size: 12px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+    }
+}

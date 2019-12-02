@@ -1,0 +1,95 @@
+.right-menu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background-color: $white;
+    padding-top: 280px;
+    z-index: 4;
+    overflow-x: hidden;
+    width: 0;
+    box-shadow: 0px 0 13px -4px #888;
+
+    .menu {
+        
+        padding-right: 50px;
+    }
+
+    .cat-title {
+        text-align: right;
+        padding-bottom: 40px;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        
+        a {
+            font-size: 18px;
+            color: $grey-icons;
+        }
+
+        .s {
+            padding-left: 20px;
+            font-size: 50px;
+        }
+    }
+
+    .show-all {
+        text-transform: uppercase;
+        color: $blue;
+        position: absolute;
+        bottom: 100px;
+        font-weight: bold;
+        left: 60px;
+
+        &:before {
+            content: "";
+            position: absolute;
+            border-bottom: 1px solid $blue;
+            width: 80%;
+            bottom: -10px;
+            right: 17px;
+            
+            &:hover {
+                cursor: default;
+            }
+            
+        }
+        
+
+        &:hover {
+            color: $light-blue;
+        }
+    }
+
+    @include breakpoint(tablet) {
+
+        .show-all {
+            bottom: 50px;
+            font-size: 12px;
+            left: 40%;
+        }
+
+        .cat-title {
+            padding-bottom: 20px;
+            
+        }
+    }
+
+    @include breakpoint(phone) {
+    
+        padding-top: 100px;
+
+        .show-all {
+            bottom: 50px;
+            font-size: 12px;
+            left: 30%;
+        }
+
+        .cat-title {
+            padding-bottom: 20px;
+            
+        }
+    }
+
+}

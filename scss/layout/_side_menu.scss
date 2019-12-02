@@ -1,0 +1,81 @@
+.side-menu {
+    position: fixed;
+    width: 145px;
+    height: 100%;
+    background-color: $white;
+    box-shadow: -12px 0 18px 4px $grey;
+    text-align: center;
+    padding-top: 33px;
+    z-index: 3;
+
+    ul {
+        margin-top: 130px;
+    }
+
+    li {
+        padding-bottom: 45px;
+
+        &:last-child {
+            padding-bottom: 0;
+            margin-top: 550px;
+        }
+    }
+
+    @include breakpoint(tablet) {
+
+        width: 100px;
+        
+        li {
+
+            &:last-child {
+                margin-top: 450px;
+            }
+        }
+    }
+
+    @include breakpoint(phone) {
+    
+        width: 70px;
+
+        li {
+
+            &:last-child {
+                margin-top: 70px;
+            }
+        }
+
+    }
+}
+
+.item-container {
+    max-width: 50px;
+    margin: 0 auto;
+}
+
+.s-home {
+    font-size: 30px;
+}
+
+.s-basket {
+    font-size: 30px;
+}
+
+.s-download {
+    font-size: 30px;
+}
+
+.s-search {
+    font-size: 30px;
+}
+
+.s-basket,
+.s-download,
+.s-home,
+.s-search {
+    color: $grey-icons;
+    text-align: center;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
