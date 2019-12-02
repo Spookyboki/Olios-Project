@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
+  "homepage": "https://Spookyboki.github.io/Olios-Project",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d app"
   },
   "author": "Bojan",
   "license": "ISC",
@@ -13,6 +15,7 @@
   },
   "dependencies": {
     "async": "^2.6.1",
+    "gh-pages": "^2.1.1",
     "gulp-consolidate": "^0.2.0",
     "gulp-iconfont": "^10.0.2",
     "gulp-sass": "^4.0.2",
