@@ -1,0 +1,22 @@
+html, input {
+  font-family: 'Lato', sans-serif;
+}
+
+.container {
+  max-width: 2165px;
+  float: right;
+  @include breakpoint (tablet) {
+    max-width: 768px;
+    padding: 0 22px;
+  }
+  @include breakpoint (phone) {
+    min-width: 320px;
+    padding: 0 20px;
+  }
+}
+
+.hide {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}

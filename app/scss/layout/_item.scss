@@ -1,0 +1,566 @@
+.item {
+    padding-left: 145px;
+    display: flex;
+    height: 100%;
+
+    @include breakpoint (tablet) {
+        flex-wrap: wrap;
+        padding-left: 100px;
+    }
+
+    @include breakpoint (phone) {
+        flex-wrap: wrap;
+        padding-left: 71px;
+    }
+}
+
+.content-container {
+    background-color: $light-grey;
+    width: 55%;
+    position: relative;
+
+    .wrapp {
+        padding: 0 200px 0 120px;
+    }
+
+    .title {
+        padding: 60px 0 55px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 97%;
+        flex-wrap: nowrap;
+
+        .s {
+            font-size: 65px;
+            color: $grey;
+        }
+    }
+
+    .cat-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .categ-title {
+        color: $grey;
+        font-size: 24px;
+        padding-right: 20px;
+    }
+
+    h1 {
+        font-weight: 300;
+    }
+
+    @media screen and (max-width: 1620px) {
+        
+        .title {
+
+            .s {
+                font-size: 45px;
+            }
+        }
+
+        .categ-title {
+            font-size: 20px;
+        }
+
+        h1 {
+            font-size: 30px;
+        }
+    }
+
+    @media screen and (max-width: 1620px) {
+
+        .wrapp {
+            padding: 0px 85px 0 40px;
+        }
+
+        .categ-title {
+            display: none;
+        }
+
+        .title {
+            padding: 95px 0 20px 0;
+        }
+    }
+
+    @media screen and (max-width: 1400px){
+        
+        .title {
+            padding: 30px 0 20px 0;
+        }
+    }
+
+    @include breakpoint(tablet) {
+        
+        width: 100%;
+
+        .title {
+            padding: 30px 0 20px 0;
+        }
+
+        .categ-title {
+            display: block;
+        }
+    }
+
+    @include breakpoint (phone) {
+
+        width: 100%;
+
+        .wrapp {
+            padding: 0px;
+        }
+
+        .title {
+            padding: 10px 0 10px 0;
+            text-align: center;
+
+            .s {
+                display: none;
+            }
+        }
+
+        h1 {
+            margin: 0 auto;
+            font-size: 24px;
+        }
+    }
+}
+
+.item-info {
+    
+    h2 {
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 42px;
+        padding-bottom: 30px;
+
+        span {
+            color: $blue;
+        }
+    }
+
+    p {
+        color: $grey;
+        line-height: 2.4;
+        width: 70%;
+        padding-bottom: 50px;
+    }
+
+    @media screen and (max-width: 1620px) {
+
+        h2 {
+            font-size: 40px;
+        }
+    }
+
+    @media screen and (max-width: 1400px) {
+        
+        h2 {
+            font-size: 32px;
+        }
+        
+        p {
+            line-height: 1.8;
+        }
+    }
+
+    @include breakpoint(tablet) {
+
+        h2 {
+            font-size: 34px;
+        }
+
+        p {
+            line-height: 1.4;
+            padding-bottom: 10px;
+        }
+    }
+
+    @include breakpoint (phone) {
+
+        text-align: center;
+        padding-bottom: 320px;
+
+        h2 {
+            font-size: 27px;
+        }
+
+        p {
+            font-size: 12px;
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+
+.shop {
+    display: flex;
+
+    .tag {
+        font-size: 18px;
+        color: $grey;
+    }
+
+    .big-num {
+        font-size: 48px;
+    }
+
+    .del {
+        font-size: 22px;
+        transform: translateX(20%);
+        font-weight: bold;
+    }
+
+    .number-tag {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 115px;
+        padding-top: 15px;
+    }
+
+    .quantity-value {
+        max-width: 50px;
+        height: 50px;
+        padding-top: 40px;
+        
+
+        input {
+            width: 100%;
+            border-radius: 10px;
+            text-align: center;
+        }
+    }
+
+    .add {
+        background-color: $blue;
+        text-transform: uppercase;
+        color: $white;
+        min-width: 150px;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 10px 25px;
+        text-align: center;
+        border-radius: 18px;
+        height: 35px;
+        align-self: flex-end;
+        float: right;
+        transform: translateX(40%);
+
+        &:hover {
+            background-color: $light-blue;
+        }
+    }
+
+    @media screen and (max-width: 1620px) {
+        
+        flex-wrap: wrap;
+
+        .add {
+            transform: translateX(0%);
+            margin-top: 40px;
+        }
+
+        .quantity-value {
+            padding-top: 22px;
+        }
+    }
+
+    @media screen and (max-width: 1400px) {
+
+        h2 {
+            font-size: 40px;
+        }
+
+        .big-num {
+            font-size: 40px;
+        }
+    }
+
+    @include breakpoint (phone) {
+
+        .big-num {
+            font-size: 26px;
+        }
+
+        .del {
+            font-size: 14px;
+        }
+
+        .price {
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .quantity {
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .quantity-value {
+            margin: 0 auto;
+            margin-bottom: 14px;
+            padding-top: 15px;
+        }
+
+        .add {
+            margin: 0 auto;
+            font-size: 12px;
+            height: 28px;
+            min-width: 110px;
+            padding: 8px 15px;
+        }
+
+        .number-tag {
+            padding-right: 0;
+            padding-bottom: 9px;
+        }
+
+    }
+}
+
+.recommend {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: $white;
+    padding: 0 0 50px 50px;
+    box-shadow: 9px 0 30px -8px $grey;
+    
+    h4 {
+        text-transform: uppercase;
+        background-color: $white;
+        color: $grey;
+        font-size: 40px;
+        padding: 50px 0;
+    }
+
+    h5 {
+        text-transform: uppercase;
+        color: $black;
+        font-size: 20px;
+        padding-bottom: 10px;
+    }
+
+    p {
+        color: $grey;
+        padding-bottom: 20px;
+    }
+
+    @media screen and (max-width: 1400px){
+        h4 {
+            font-size: 20px;
+            padding: 10px 0;
+        }
+    }
+
+    @include breakpoint (tablet) {
+
+        h4 {
+            font-size: 20px;
+            padding: 10px 0;
+        }
+    }
+
+    @include breakpoint (phone) {
+
+        padding: 0 0 0 10px;
+
+        h4 {
+            padding: 5px 0px;
+        }
+    }
+}
+
+.items-other {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100%;
+
+    img {
+        padding-left: 20px;
+        max-height: 150px;
+    }
+
+    .others {
+        background-color: $white;
+        width: 350px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    @media screen and (max-width: 1400px) {
+        flex-wrap: wrap;
+
+        .others {
+            display: flex;
+            width: 100%;
+            align-items: center;
+
+            p {
+                display: none;
+            }
+
+            h5 {
+                font-size: 26px;
+            }
+        }
+
+        img {
+            padding-right: 30px;
+            max-height: 80px;
+        }
+    }
+
+    @include breakpoint (tablet) {
+
+        flex-wrap: nowrap;
+
+        .others {
+            display: block;
+        }
+
+        img {
+            max-height: 100px;
+        }
+    }
+
+    @include breakpoint (phone) {
+        
+        .others {
+
+            h5 {
+
+                font-size: 18px;
+            }
+        }
+
+        img {
+            padding-right: 20px;
+            padding-left: 0;
+        }
+    }
+}
+
+.image-magnifier-container {
+    width: 45%;
+    position: relative;
+
+    .img-box {
+        width: 100%;
+        text-align: center;
+
+        img {
+            width: 70%;
+            margin: 0 auto;
+        }
+    }
+
+    .likes {
+        display: flex;
+        justify-content: flex-end;
+        padding: 80px 50px 80px;
+        
+        p {
+            float: left;
+            font-size: 28px;
+            padding-right: 15px;
+            font-weight: 300;
+        }
+
+        .s {
+            font-size: 28px;
+            color: $pink;
+        }
+    }
+
+    .zoom {
+        text-align: center;
+        margin-top: 100px;
+        position: absolute;
+        bottom: 50px;
+        left: 45%;
+
+        .s {
+            font-size: 30px;
+            color: $blue;
+            font-weight: bold;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .s-plus {
+            padding-right: 20px;
+        }
+    }
+
+    @include breakpoint(tablet) {
+        
+        width: 100%;
+        height: 250px;
+
+        .likes {
+            padding: 38px 157px 0px;
+
+            p {
+                font-size: 20px;
+            }
+
+            .s {
+                font-size: 23px;
+            }
+        }
+
+        .zoom {
+            bottom: -90%;
+        }
+
+        .img-box {
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+
+    @include breakpoint (phone) {
+
+        width: 100%;
+        height: 340px;
+
+        .likes {
+            padding: 34px 8px 0px;
+            justify-content: end;
+
+            p {
+                font-size: 14px;
+                padding-right: 4px;
+            }
+
+            .s {
+                padding-right: 0;
+                font-size: 14px;
+            }
+        }
+
+        .zoom {
+            bottom: 10px;
+            left: 39%;
+
+            .s {
+                font-size: 18px;
+            }
+
+            .s-plus {
+                padding-right: 12px;
+            }
+        }
+    }
+}
